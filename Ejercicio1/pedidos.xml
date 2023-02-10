@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE pedidos SYSTEM "pedidos.dtd">
+<pedidos>
+    <sucursal>
+        <zonaexposicion>
+            <direccion>Avda España, 4</direccion>
+        </zonaexposicion>
+        <zonagestion>
+            <direccion>Calle Tornillo, 5</direccion>
+            <albaran>12345</albaran>
+            <pago>Realizado</pago>
+        </zonagestion>
+    </sucursal>
+    <codSucursal>A1234567</codSucursal>
+    <nomTrabajador>María Gil</nomTrabajador>
+    <fechaPedido>10/02/2023</fechaPedido>
+    <observaciones>Urgente</observaciones>
+    <articulos>
+        <articulo>
+            <codArticulo>ABC-123</codArticulo>
+            <numArticulos>4</numArticulos>
+            <preciounidad>2 euros</preciounidad>
+            <observArticulo>Frágil</observArticulo>
+            <plazoRevision>35</plazoRevision>
+        </articulo>
+    </articulos>
+</pedidos>

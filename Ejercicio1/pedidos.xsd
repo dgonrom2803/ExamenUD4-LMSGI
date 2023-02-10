@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedidos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sucursal">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="zonaexposicion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="direccion" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="zonagestion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="direccion" type="xs:string" />
+                                        <xs:element name="albaran" type="xs:string" />
+                                        <xs:element name="pago" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="codSucursal">
+                    <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:pattern value="[A-Z az][0-9]{7}"/>
+                            </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="nomTrabajador" type="xs:string" />
+                <xs:element name="fechaPedido" type="xs:string" />
+                <xs:element name="observaciones" type="xs:string" />
+                <xs:element name="articulos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="articulo">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="codArticulo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[A-Z][A-Z][A-Z]-[0-9]{3}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="numArticulos" type="xs:string" />
+                                        <xs:element name="preciounidad" type="xs:string" />
+                                        <xs:element name="observArticulo" type="xs:string" />
+                                        <xs:element name="plazoRevision" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
